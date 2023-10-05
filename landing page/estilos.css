@@ -1,0 +1,337 @@
+@font-face {
+    font-family: "ITCBenguiat";
+    src: url("./ITCBenguiat.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "itcbenguiat-medium";
+    src: url("./itcbenguiat-medium.ttf") format("truetype");
+}
+
+
+body {
+    background-color: black;
+    height: 100vh;
+    margin: 0; /* Elimina el margen predeterminado del cuerpo del documento */
+}
+
+.contenedor {
+    position: relative;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 3%;
+    z-index: 2;
+}
+
+.logo img {
+    max-width: 15%;
+    width: auto;
+    display: block;
+}
+
+
+.texto-superpuesto {
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    width: 80%; 
+    text-align: center;
+    color: white;
+    z-index: 1; 
+} 
+
+
+@media (max-width: 768px) {
+    .texto-superpuesto {
+        position: absolute;
+        top: 200px;
+        left: 10%;
+        right: 90%;
+        width: 100%; 
+        text-align: center;
+        margin-top: 80px; 
+}
+}
+
+
+@media (max-width: 450px) {
+    .texto-superpuesto {
+        position: absolute;
+        top: 200px;
+        left: 10%;
+        right: 90%;
+        width: 100%; 
+        text-align: center;
+        margin-top: 80px; 
+}
+}
+
+  
+#suscribete-texto {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    animation: agrandarCambiarColor 2s infinite alternate; 
+}
+
+.texto-superpuesto h2 {
+    font-size: 18px;
+    color: white;
+}
+
+@keyframes agrandarCambiarColor {
+    0% {
+        font-size: 24px;
+        color: white;
+    }
+    100% {
+        font-size: 36px; /* Tamaño agrandado */
+        color: red; /* Color rojo */
+    }
+}
+
+
+
+h1{
+    text-align:left;
+    font-family: ITCBenguiat;
+    margin-top: 45px;
+    font-size: 28px;
+}
+
+h2{
+    text-align:left;
+    font-family: ITCBenguiat;
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0; 
+    max-width: 400px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    font-family: ITCBenguiat;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+
+}
+
+input[type="submit"] {
+    font-family: ITCBenguiat;
+    background-color: #B31312;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+label {
+    color: #ff0000;
+    font-family: ITCBenguiat;
+}
+
+.formulario {
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    width: calc(100% - 40px); /* Ancho del formulario es el 100% del contenedor - 40px de margen */
+    margin: 20px 0; /* Ajusta el margen superior e inferior */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 4;
+}
+
+@media (max-width: 768px) {
+    .formulario {
+        position: static; /* Vuelve a la posición estática para que esté debajo de las tarjetas */
+        max-width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        margin: 20px 0; /* Añade un margen superior e inferior para separarlo de las tarjetas */
+        margin-top:150px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .formulario {
+        position: static; /* Vuelve a la posición estática para que esté debajo de las tarjetas */
+        max-width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        margin: 20px 0; /* Añade un margen superior e inferior para separarlo de las tarjetas */
+    }
+}
+
+@media (min-width: 769px) {
+    .formulario label {
+        text-align: left;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .formulario select,
+    .formulario input[type="text"],
+    .formulario input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: none;
+        border-radius: 5px;
+    }
+    .formulario input[type="submit"] {
+        width: auto;
+        margin-top: 10px;
+    }
+}
+
+
+.banner {
+    background-color: #D71313;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-width: 100%;
+    font-family: ITCBenguiat
+}
+
+.banner h7 {
+    font-size: 26px;
+    font-family: ITCBenguiat;
+    margin: 0;
+}
+
+.card {
+    max-width: 100%;
+}
+
+.col-lg-4 {
+    font-family: 'ITCBenguiat';
+    display: flex;
+    justify-content: center;
+    max-width: 310px; /* Ajusta el ancho máximo de las columnas según tus preferencias */
+    margin: 80px auto 20px; /* Cambia el valor de margin-top para mover las cards más abajo */
+
+}
+
+.card-body {
+    font-family: 'ITCBenguiat';
+}
+
+footer {
+    font-family: 'ITCBenguiat';
+         color:#B31312;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente el contenido del footer */
+        align-items: center; /* Centra horizontalmente el contenido del footer */
+        padding: 10px,
+
+    }
+    
+
+  h5{
+    font-family: 'ITCBenguiat';
+font-size: 19px;
+  }
+
+  h4{
+    font-size: 19px;
+  }
+  
+  .gracias{
+        font-family:ITCBenguiat;
+  }
+
+
+#botonenviar {
+    background-color: #fff; 
+    color:#B31312; 
+    padding: 10px 20px; 
+    transition: background-color 0.3s ease;
+  }
+  
+  #botonenviar:hover {
+    background-color: #ff0000;
+    color: #fff;
+  }
+
+
+  @font-face {
+    font-family:ITCBenguiat;
+    src: url(./ITCBenguiat.otf);
+}
+  
+
+.gracias{
+    text-align: left; 
+    color: white; 
+    font-size: 84px; 
+    animation-name:agrandar;
+    animation-duration: 4s;
+}
+@keyframes agrandar {
+    0%{
+        font-size: 84px;
+    }
+
+    50%{
+        font-size: 130px;
+        color: #B31312;
+    }
+   
+    100%{
+        font-size: 84px;
+    }
+}
+
+#bodygracias{
+    background-image: url('./imagenes/fondo.jpg'); /* Reemplaza 'nombre-de-tu-imagen.jpg' con el nombre de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir todo el elemento */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el desplazamiento de la página */
+    background-position: center; /* Centra la imagen de fondo */
+    color: white; /* Establece el color del texto para que sea legible en el fondo */
+}
+
+#bodygracias{
+    display: flex;
+    align-items: center;
+}
+
+
+.btn-enviar {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.1); 
+}
+
